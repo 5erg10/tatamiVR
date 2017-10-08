@@ -407,10 +407,10 @@
 
                 pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 pointer.transform.parent = holder.transform;
-                pointer.GetComponent<MeshRenderer>().material = newMaterial;
+                pointer.GetComponent&lt;MeshRenderer&gt;().material = newMaterial;
 
-                pointer.GetComponent<BoxCollider>().isTrigger = true;
-                pointer.AddComponent<Rigidbody>().isKinematic = true;
+                pointer.GetComponent&lt;BoxCollider&gt;().isTrigger = true;
+                pointer.AddComponent&lt;Rigidbody&gt;().isKinematic = true;
                 pointer.layer = 2;
 
                 if (showCursor)
@@ -418,11 +418,11 @@
                     cursor = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     cursor.name = "pointActive";
                     cursor.transform.parent = holder.transform;
-                    cursor.GetComponent<MeshRenderer>().material = newMaterial;
+                    cursor.GetComponent&lt;MeshRenderer&gt;().material = newMaterial;
                     cursor.transform.localScale = cursorScale;
 
-                    cursor.GetComponent<SphereCollider>().isTrigger = true;
-                    cursor.AddComponent<Rigidbody>().isKinematic = true;
+                    cursor.GetComponent&lt;SphereCollider&gt;().isTrigger = true;
+                    cursor.AddComponent&lt;Rigidbody&gt;().isKinematic = true;
                     cursor.layer = 2;
                 }
 
@@ -491,7 +491,7 @@
         private SteamVR_Controller.Device device;
 
         void Start () {
-                trackedObject = GetComponent<SteamVR_TrackedObject>();
+                trackedObject = GetComponent&lt;SteamVR_TrackedObject>();
             }
 
         void Update () {
